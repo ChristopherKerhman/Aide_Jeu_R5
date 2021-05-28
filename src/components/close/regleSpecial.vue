@@ -38,7 +38,7 @@
       <tr>
         <td v-if="!situation1">Petite arme ?</td>
         <td v-else class="ligth">Petite arme</td>
-        <td class="reponse"><button  v-show="!situation1" v-on:click="petiteArme(1)">Off</button><button v-if="situation1" class="button_active" v-on:click="petiteArme(-1)">On</button></td>
+        <td class="reponse"><button class="classique" v-show="!situation1" v-on:click="petiteArme(1)">Off</button><button v-if="situation1" class="button_active" v-on:click="petiteArme(-1)">On</button></td>
       </tr>
 
     </table>

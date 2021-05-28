@@ -3,7 +3,7 @@
       <h3 class="sous_titre_3">La situation de la cible au moment du tir ?</h3>
       <h3 class="sous_titre_3">Armure de la cible</h3>
       <ul class="listRow" v-if="isis">
-        <li class="espace" v-for="bouclier in coteMaille" v-bind:key="bouclier"><button v-on:click="sav(bouclier.valeur)">{{bouclier.des}}</button></li>
+        <li class="espace" v-for="bouclier in coteMaille" v-bind:key="bouclier"><button class="classique" v-on:click="sav(bouclier.valeur)">{{bouclier.des}}</button></li>
       </ul>
       <table>
         <tr v-if="DBRSpecial[8].valide">
@@ -12,7 +12,7 @@
           <tr v-else>
             <td v-if="!situation1">La cible est derrière un couvert lourd et/ou dans un champs de force ?</td>
               <td v-else class="ligth">La cible est derrière un couvert lourd et/ou dans un champs de force.</td>
-            <td class="reponse"><button  v-show="!situation1" v-on:click="heavyCover(2)">Off</button><button v-if="situation1" class="button_active" v-on:click="heavyCover(-2)">On</button></td>
+            <td class="reponse"><button class="classique"  v-show="!situation1" v-on:click="heavyCover(2)">Off</button><button  v-if="situation1" class="button_active" v-on:click="heavyCover(-2)">On</button></td>
           </tr>
           <tr v-if="DBRSpecial[8].valide || DBRSpecial[8].valide">
             <td colspan="2" class="cellule_centre">Impossible de se cacher derrière un couvert léger, le tireur possède la modification <span v-if="DBRSpecial[8].valide">"Gros calibre"</span><span v-if="DBRSpecial[7].valide">"Visée sûre"</span>.</td>
@@ -20,7 +20,7 @@
           <tr v-else>
             <td v-if="!situation2">La cible est derrière un couvert léger ou avec un dispositif technologique ou magique la rendant invisible ?</td>
             <td v-else class="ligth">La cible est derrière un couvert léger ou avec un dispositif technologique ou magique la rendant invisible.</td>
-            <td class="reponse"><button  v-show="!situation2" v-on:click="ligthCover(1)">Off</button><button v-if="situation2" class="button_active" v-on:click="ligthCover(-1)">On</button></td>
+            <td class="reponse"><button class="classique" v-show="!situation2" v-on:click="ligthCover(1)">Off</button><button  v-if="situation2" class="button_active" v-on:click="ligthCover(-1)">On</button></td>
           </tr>
           <tr v-if="modifiable[0].valide || situation7 || situation9">
             <td colspan="2" class="cellule_centre">
@@ -32,7 +32,7 @@
           <tr v-else>
             <td v-if="!situation3">La cible est en mouvement tactique (l'ordre au moment du tir) ?</td>
             <td v-else class="ligth">La cible est en mouvement tactique.</td>
-              <td class="reponse"><button  v-show="!situation3" v-on:click="mouvementTactique(1)">Off</button><button v-if="situation3" class="button_active"  v-on:click="mouvementTactique(-1)">On</button></td>
+              <td class="reponse"><button class="classique" v-show="!situation3" v-on:click="mouvementTactique(1)">Off</button><button v-if="situation3" class="button_active"  v-on:click="mouvementTactique(-1)">On</button></td>
           </tr>
           <tr v-if="situation9">
             <td colspan="2" class="cellule_centre">La cible est immobile.</td>
@@ -40,7 +40,7 @@
           <tr v-else>
             <td v-if="!situation4">La cible est en vol au moment du tir ?</td>
             <td v-else class="ligth">La cible est en vol au moment du tir.</td>
-            <td class="reponse"><button  v-show="!situation4" v-on:click="vol(1)">Off</button><button v-if="situation4" class="button_active" v-on:click="vol(-1)">On</button></td>
+            <td class="reponse"><button class="classique" v-show="!situation4" v-on:click="vol(1)">Off</button><button v-if="situation4" class="button_active" v-on:click="vol(-1)">On</button></td>
           </tr>
           <tr v-if="situation8">
             <td colspan="2" class="cellule_centre">La cible est géante ou un véhicule.</td>
@@ -48,12 +48,12 @@
           <tr v-else>
             <td v-if="!situation5">La cible est de petite taille ?</td>
             <td v-else class="ligth">La cible est de petite taille</td>
-              <td class="reponse"><button  v-show="!situation5" v-on:click="petite(1)">Off</button><button v-if="situation5" class="button_active" v-on:click="petite(-1)">On</button></td>
+              <td class="reponse"><button class="classique" v-show="!situation5" v-on:click="petite(1)">Off</button><button v-if="situation5" class="button_active" v-on:click="petite(-1)">On</button></td>
           </tr>
           <tr>
             <td v-if="!situation6">La cible a un bouclier balistique ?</td>
             <td v-else class="ligth">La cible a un bouclier balistique ?</td>
-            <td class="reponse"><button  v-show="!situation6" v-on:click="bouclier(1)">Off</button><button v-if="situation6" class="button_active" v-on:click="bouclier(-1)">On</button></td>
+            <td class="reponse"><button class="classique" v-show="!situation6" v-on:click="bouclier(1)">Off</button><button v-if="situation6" class="button_active" v-on:click="bouclier(-1)">On</button></td>
           </tr>
           <tr v-if="situation3 || situation9">
             <td colspan="2" class="cellule_centre">
@@ -64,7 +64,7 @@
           <tr v-else>
             <td v-if="!situation7">La cible est en course ou en charge ?</td>
             <td v-else class="ligth">La cible est en course ou en charge ?</td>
-            <td class="reponse"><button  v-show="!situation7" v-on:click="course (-1)">Off</button><button v-if="situation7" class="button_active" v-on:click="course (1)">On</button></td>
+            <td class="reponse"><button class="classique" v-show="!situation7" v-on:click="course (-1)">Off</button><button v-if="situation7" class="button_active" v-on:click="course (1)">On</button></td>
           </tr>
           <tr v-if="situation5">
             <td colspan="2" class="cellule_centre">La figurine est petite.</td>
@@ -72,7 +72,7 @@
           <tr v-else>
             <td v-if="!situation8">La cible est de grande taille ou un véhicule ?</td>
             <td v-else class="ligth">La cible est de grande taille ou un véhicule.</td>
-              <td class="reponse"><button  v-show="!situation8" v-on:click="vehicule(-1)">Off</button><button v-if="situation8" class="button_active" v-on:click="vehicule(1)">On</button></td>
+              <td class="reponse"><button class="classique" v-show="!situation8" v-on:click="vehicule(-1)">Off</button><button v-if="situation8" class="button_active" v-on:click="vehicule(1)">On</button></td>
           </tr>
           <tr v-if="situation3 || situation4 || situation7">
             <td colspan="2" class="cellule_centre">la cible est en mouvement.</td>
@@ -80,7 +80,7 @@
           <tr v-else>
             <td v-if="!situation9">La cible est immobile (sans ordre, ordre couverture, tir ajusté, tête baissée, contact) ? <span v-if="modifiable[1].valide">Arme équipé d'une lunette de visée</span></td>
             <td v-else class="ligth">La cible est immobile (sans ordre, ordre couverture, tir ajusté, tête baissée, contact). <span v-if="modifiable[1].valide">Arme équipé d'une lunette de visée</span></td>
-              <td class="reponse"><button  v-show="!situation9" v-on:click="stop">Off</button><button v-if="situation9" class="button_active" v-on:click="stop">On</button></td>
+              <td class="reponse"><button class="classique" v-show="!situation9" v-on:click="stop">Off</button><button v-if="situation9" class="button_active" v-on:click="stop">On</button></td>
           </tr>
           <tr v-if="modifiable[2].valide || modifiable[3].valide">
             <td colspan="2" class="cellule_centre">
@@ -91,7 +91,7 @@
           <tr v-else>
             <td v-if="!situation10">Condition de combat dégradé ? (nuit, pluie, intérieur d'un batiment ou d'une ruine)</td>
             <td v-else class="ligth">Condition de combat dégradé.</td>
-            <td class="reponse"><button  v-show="!situation10" v-on:click="pluie(1)">Off</button><button v-if="situation10" class="button_active" v-on:click="pluie(-1)">On</button></td>
+            <td class="reponse"><button class="classique" v-show="!situation10" v-on:click="pluie(1)">Off</button><button v-if="situation10" class="button_active" v-on:click="pluie(-1)">On</button></td>
           </tr>
       </table>
     </article>

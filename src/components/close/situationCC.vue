@@ -4,7 +4,7 @@
     <article>
       <h3 class="sous_titre_3">Armure de la cible</h3>
       <ul class="listRow" v-if="isis">
-        <li class="espace" v-for="bouclier in coteMaille" v-bind:key="bouclier"><button v-on:click="sav(bouclier.valeur)">{{bouclier.des}}</button></li>
+        <li class="espace" v-for="bouclier in coteMaille" v-bind:key="bouclier"><button class="classique" v-on:click="sav(bouclier.valeur)">{{bouclier.des}}</button></li>
       </ul>
     </article>
     <table>
@@ -15,7 +15,7 @@
       <tr v-for="coupe in situationCC" v-bind:key="coupe">
         <td v-if="!coupe.valide">{{coupe.etat}}</td>
         <td v-if="coupe.valide" class="ligth">{{coupe.etat}}</td>
-          <td><button  v-if="!coupe.valide" v-on:click="trans(coupe.modificateur, coupe.id)">Off</button>
+          <td><button class="classique" v-if="!coupe.valide" v-on:click="trans(coupe.modificateur, coupe.id)">Off</button>
             <button v-if="coupe.valide" class="button_active" v-on:click="trans(- coupe.modificateur, coupe.id)">On</button></td>
       </tr>
     </table>
@@ -23,7 +23,7 @@
       <h4 v-if="situationCC[0].valide" class="avertissement">Combat impossible l'adversaire est trop loin.</h4>
       <h4 v-if="situationCC[5].valide" class="avertissement">Combat impossible l'adversaire est derrière un couvert lourd.</h4>
       <h4 v-if="dc < touche" class="avertissement">Combat impossible le dé de combat de votre figurine est trop faible pour toucher.</h4>
-      <button v-on:click="retour">Retour</button>
+      <button class="button-two" v-on:click="retour">Retour</button>
     </div>
   </article>
 </template>

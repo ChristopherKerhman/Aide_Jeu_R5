@@ -253,14 +253,15 @@ button:hover {
   text-decoration: none;
   color: Black;
 }
-button{
+.classique {
         font-size: 1em;
         height: 3em;
         min-width: 3em;
         width: auto;
-        color: black;
         display:block;
         text-decoration:none;
+        text-transform: uppercase;
+        font-weight: 400;
         /* margin:0 auto; */
         margin-bottom: 0.5em;
         margin-top: 0em;
@@ -268,33 +269,60 @@ button{
         margin-right: auto;
         border-radius:7px;
         border:solid 1px  #bf0603;
-        background-color: #565656;
+        background-color: #c3c3c3;
         text-align:center;
         padding: auto;
         -webkit-transition: all 0.1s;
         -moz-transition: all 0.1s;
         transition: all 0.1s;
-        -webkit-box-shadow: 0px 5px 0px  #bf0603;
-        -moz-box-shadow: 0px 5px 0px  #bf0603;
-        box-shadow: 0px 5px 0px   #bf0603;
+        -webkit-box-shadow: 0px 5px 0px  #d0acab;
+        -moz-box-shadow: 0px 5px 0px  #d0acab;
+        box-shadow: 0px 5px 0px   #dcc4c3;
         font-family: 'Russo One', sans-serif;
 }
-button:active {
-    -webkit-box-shadow: 0px 2px 0px  #bf0603;
-    -moz-box-shadow: 0px 2px 0px  #bf0603;
-    box-shadow: 0px 2px 0px   #bf0603;
+.classique:active {
+    -webkit-box-shadow: 0px 5px 0px  #d0acab;
+    -moz-box-shadow: 0px 5px 0px  #d0acab;
+    box-shadow: 0px 5px 0px   #dcc4c3;
     position:relative;
     top:7px;
 }
 .button_active {
-    border:solid 1px #22ba18;
-    color:  #03bf1f;
-    -webkit-box-shadow: 0px 2px 0px #03bf1f;
-    -moz-box-shadow: 0px 2px 0px  #03bf1f;
-    box-shadow: 0px 2px 0px   #03bf1f;
-    position:relative;
-    top:7px;
-    font-family: 'Russo One', sans-serif;
+  font-size: 1em;
+  height: 3em;
+  min-width: 3em;
+  width: auto;
+  display:block;
+  text-decoration:none;
+  background-color: #c3c3c3;
+  font-weight: 400;
+  /* margin:0 auto; */
+  margin-bottom: 0.5em;
+  margin-top: 0em;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius:7px;
+  border:solid 1px #22ba18;
+  color:  #03bf1f;
+  text-transform: uppercase;
+  -webkit-box-shadow: 0px 2px 0px #03bf1f;
+  -moz-box-shadow: 0px 2px 0px  #03bf1f;
+  box-shadow: 0px 2px 0px   #03bf1f;
+  position:relative;
+  top:7px;
+  font-family: 'Russo One', sans-serif;
+}
+/*==Bouton suite==*/
+/*Button Two*/
+.button-two {
+  border:solid 1px  #bf0603;
+  font-family: 'Russo One', sans-serif;
+  text-transform: uppercase;
+  border-radius: 4px;
+  background-color:#c3c3c3;
+  padding: 1em;
+  width: auto;
+  transition: all 0.5s;
 }
 /*==Luminosité panneau de contrôle.==*/
 .ligth {
@@ -382,6 +410,7 @@ button:active {
 }
 .lienNav {
   color: #2e3134;
+  text-decoration: underline;;
 }
 .lienNav:hover {
   color: #42b983;

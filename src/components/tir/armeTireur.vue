@@ -3,26 +3,26 @@
   <div id="conteneur_row_dice" v-if="affichageArme">
     <article class="conteneur_col">
       <h3 class="sous_titre_3">Type de dé de votre arme</h3>
-      <button v-on:click="dice(6)">D6</button>
-      <button v-on:click="dice(8)">D8</button>
-      <button v-on:click="dice(10)">D10</button>
-      <button v-on:click="dice(12)">D12</button>
-      <button v-on:click="surP()">++</button>
+      <button class="classique" v-on:click="dice(6)">D6</button>
+      <button class="classique" v-on:click="dice(8)">D8</button>
+      <button class="classique" v-on:click="dice(10)">D10</button>
+      <button class="classique" v-on:click="dice(12)">D12</button>
+      <button class="classique" v-on:click="surP()">++</button>
     </article>
       <article class="conteneur_col">
         <h3 class="sous_titre_3">Puissance de l'arme</h3>
-        <button v-on:click="PuissanceA(1)">1</button>
-        <button v-on:click="PuissanceA(2)">2</button>
-        <button v-on:click="PuissanceA(3)">3</button>
-        <button v-on:click="PuissanceA(4)">4</button>
-        <button v-on:click="PuissanceA(5)">5</button>
+        <button class="classique" v-on:click="PuissanceA(1)">1</button>
+        <button class="classique" v-on:click="PuissanceA(2)">2</button>
+        <button class="classique" v-on:click="PuissanceA(3)">3</button>
+        <button class="classique" v-on:click="PuissanceA(4)">4</button>
+        <button class="classique" v-on:click="PuissanceA(5)">5</button>
       </article>
     </div>
     <h4 class="sous_titre_3">Panneau caractéristique de l'arme</h4>
     <article class="conteneur_col">
     <div class="conteneur_row">
-      <button v-show="!ShowRS" v-on:click="RS(true)">Régle<br />spéciales</button><button v-show="ShowRS" v-on:click="RS(false)">Fermer<br />règles spéciales</button>
-      <button v-show="DBRSpecial[12].valide" v-on:click="Mod(true)">Modifiable</button><button v-show="isis" v-on:click="Mod(false)">Fermer<br />Modifiable</button>
+      <button class="classique" v-show="!ShowRS" v-on:click="RS(true)">Régle<br />spéciales</button><button class="classique" v-show="ShowRS" v-on:click="RS(false)">Fermer<br />règles spéciales</button>
+      <button class="classique" v-show="DBRSpecial[12].valide" v-on:click="Mod(true)">Modifiable</button><button class="classique" v-show="isis" v-on:click="Mod(false)">Fermer<br />Modifiable</button>
     </div>
     <table v-show="ShowRS">
       <tr>

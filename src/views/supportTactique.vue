@@ -34,19 +34,19 @@
             <label for="ArtillerieX">Coordonnée Y</label>
             <input class="sizeInput" type="number" max="90" min="0" v-model.number="Coord_Y" /> pouce(s)
           </div>
-          <button v-on:click="enregistrementLocal">Enregistrement des coordonnées</button>
+          <button class="classique" v-on:click="enregistrementLocal">Enregistrement des coordonnées</button>
           </div>
           <p v-if="message1">
             Vous n'avez pas enregistrer de coordonnée pour l'artillerie.
           </p>
           <p v-if="message">Vos coordonnées sont enregistrer. Revenez au tour prochain pour voir le résultat.</p>
-          <button v-if="message && !blocage"  v-on:click="actionSupport">Action Support</button>
+          <button class="classique" v-if="message && !blocage"  v-on:click="actionSupport">Action Support</button>
         </div>
         <p v-if="coordonneesArtillerie.length === 2">
           Coordonnée X = {{coordonneesArtillerie[0].X}} pouces.<br />
           Coordonnée Y = {{coordonneesArtillerie[0].Y}} pouces.<br />
           Résultat du tir = {{coordonneesArtillerie[1]}}
-          <button v-on:click="retour">remise à 0</button>
+          <button class="button-two" v-on:click="retour">remise à 0</button>
         </p>
       </article>
     </section>

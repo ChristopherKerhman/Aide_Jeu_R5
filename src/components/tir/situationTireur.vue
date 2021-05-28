@@ -5,27 +5,27 @@
         <tr>
           <td v-if="!situation1">Le tireur est chargé par l'unité qu'il vise ?</td>
           <td v-else class="ligth">Le tireur est chargé par l'unité qu'il vise.</td>
-          <td class="reponse"><button  v-show="!situation1" v-on:click="charge(3)">Off</button><button v-if="situation1" class="button_active" v-on:click="charge(-3)">On</button></td>
+          <td class="reponse"><button class="classique" v-show="!situation1" v-on:click="charge(3)">Off</button><button v-if="situation1" class="button_active" v-on:click="charge(-3)">On</button></td>
         </tr>
         <tr>
           <td v-if="!situation2">Le tireur cible une figurine en particulier dans une unité de plus de une figurine ?</td>
           <td v-else class="ligth">Le tireur cible une figurine en particulier dans une unité de plus de une figurine.</td>
-          <td class="reponse"><button  v-show="!situation2" v-on:click="viser(1)">Off</button><button v-if="situation2" class="button_active" v-on:click="viser(-1)">On</button></td>
+          <td class="reponse"><button class="classique" v-show="!situation2" v-on:click="viser(1)">Off</button><button v-if="situation2" class="button_active" v-on:click="viser(-1)">On</button></td>
         </tr>
         <tr>
           <td v-if="!situation3">Le tireur est derrière un couvert léger ou lourd ou géner par une figurine allié ?</td>
           <td v-else class="ligth">Le tireur est derrière un couvert léger ou lourd ou géner par une figurine allié.</td>
-          <td class="reponse"><button  v-show="!situation3" v-on:click="underCover(1)">Off</button><button v-if="situation3" class="button_active" v-on:click="underCover(-1)">On</button></td>
+          <td class="reponse"><button class="classique" v-show="!situation3" v-on:click="underCover(1)">Off</button><button v-if="situation3" class="button_active" v-on:click="underCover(-1)">On</button></td>
         </tr>
         <tr>
           <td v-if="!situation4">Le tireur est en vol ou à bord d'un véhicule (ou les deux) ?</td>
           <td v-else class="ligth">Le tireur est en vol ou à bord d'un véhicule (ou les deux).</td>
-          <td class="reponse"><button  v-show="!situation4" v-on:click="deplacement(1)">Off</button><button v-if="situation4" class="button_active" v-on:click="deplacement(-1)">On</button></td>
+          <td class="reponse"><button class="classique" v-show="!situation4" v-on:click="deplacement(1)">Off</button><button v-if="situation4" class="button_active" v-on:click="deplacement(-1)">On</button></td>
         </tr>
         <tr>
           <td v-if="!situation5">Le tireur est surélevé par rapport à la cible ?</td>
           <td v-else class="ligth">Le tireur est surélevé par rapport à la cible.</td>
-          <td class="reponse"><button  v-show="!situation5" v-on:click="domination(-1)">Off</button><button v-if="situation5" class="button_active" v-on:click="domination(+1)">On</button></td>
+          <td class="reponse"><button class="classique" v-show="!situation5" v-on:click="domination(-1)">Off</button><button v-if="situation5" class="button_active" v-on:click="domination(+1)">On</button></td>
         </tr>
       </table>
   </article>

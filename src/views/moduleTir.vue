@@ -7,27 +7,27 @@
   </header>
   <div class="conteneur_col">
       <section v-if="amt1">
-    <button v-if="mouvementT || couverture || tirA" v-on:click="nav1">Vers etape 2/5</button>
+    <button class="button-two" v-if="mouvementT || couverture || tirA" v-on:click="nav1">suite</button>
     <ordreTireur/>
       </section>
   <section v-if="amt2">
-    <button v-if="dc != 0 && puissance != 0" v-on:click="nav2">Vers etape 3/5</button>
+    <button class="button-two" v-if="dc != 0 && puissance != 0" v-on:click="nav2">Suite</button>
     <armeTireur/>
   </section>
   <section v-if="amt3">
-    <button v-if="touche <= dc" v-on:click="nav3">Vers etape 4/5</button>
+    <button class="button-two" v-if="touche <= dc" v-on:click="nav3">Suite</button>
     <p v-if="touche > dc">La difficulté du tir dépasse les capacité du tireur (DC trop faible) le tir est impossible.<br />
-      <button v-on:click="retour">Retour</button></p>
+      <button class="button-two" v-on:click="retour">Retour</button></p>
     <situationTireur/>
   </section>
   <section v-if="amt4">
-      <button v-if="sauvegarde != 10" v-on:click="nav4">Vers etape 5/5</button>
+      <button class="button-two" v-if="sauvegarde != 10" v-on:click="nav4">Suite</button>
     <p v-if="touche > dc">La difficulté du tir dépasse les capacité du tireur (DC trop faible) le tir est impossible.<br />
-      <button v-on:click="retour">Retour</button></p>
+      <button class="button-two" v-on:click="retour">Retour</button></p>
     <situationCible/>
   </section>
   <section v-if="amt5">
-      <button v-on:click="retour">Retour</button>
+      <button class="button-two" v-on:click="retour">Retour</button>
     <resolution/>
   </section>
 </div>

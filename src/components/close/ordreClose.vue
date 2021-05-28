@@ -13,19 +13,19 @@
       <div id="conteneur_row_dice">
         <article class="conteneur_col">
           <h3 class="sous_titre_3">Type de dé de votre arme</h3>
-          <button v-on:click="dice(6)">D6</button>
-          <button v-on:click="dice(8)">D8</button>
-          <button v-on:click="dice(10)">D10</button>
-          <button v-on:click="dice(12)">D12</button>
-          <button v-on:click="surP()">++</button>
+          <button class="classique" v-on:click="dice(6)">D6</button>
+          <button class="classique"  v-on:click="dice(8)">D8</button>
+          <button class="classique" v-on:click="dice(10)">D10</button>
+          <button class="classique" v-on:click="dice(12)">D12</button>
+          <button class="classique" v-on:click="surP()">++</button>
         </article>
           <article class="conteneur_col">
             <h3 class="sous_titre_3">Puissance de l'arme</h3>
-            <button v-on:click="PuissanceA(1)">1</button>
-            <button v-on:click="PuissanceA(2)">2</button>
-            <button v-on:click="PuissanceA(3)">3</button>
-            <button v-on:click="PuissanceA(4)">4</button>
-            <button v-on:click="PuissanceA(5)">5</button>
+            <button class="classique" v-on:click="PuissanceA(1)">1</button>
+            <button class="classique" v-on:click="PuissanceA(2)">2</button>
+            <button class="classique" v-on:click="PuissanceA(3)">3</button>
+            <button class="classique" v-on:click="PuissanceA(4)">4</button>
+            <button class="classique" v-on:click="PuissanceA(5)">5</button>
           </article>
         </div>
     </div>

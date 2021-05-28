@@ -6,9 +6,9 @@
       Les dommages critiques s'applique au moment où un véhicule subit une perde de au moins 4 points de structure d'un coup. Noter que les véhicules qui arrive à 0 point de structure sont immédiatement transformer en épave.
     </p>
     <div class="conteneur_row">
-      <button class="margin20" v-on:click="sol = true, vol = false">Véhicule au sol ?</button>
-      <button class="margin20" v-on:click="vol = true, sol = false">Véhicule en vol ?</button>
-      <button v-on:click="vol = false, sol = false, DommageCritique = ''">Effacer</button>
+      <button class="margin20 classique" v-on:click="sol = true, vol = false">Véhicule au sol ?</button>
+      <button class="margin20 classique" v-on:click="vol = true, sol = false">Véhicule en vol ?</button>
+      <button class="classique" v-on:click="vol = false, sol = false, DommageCritique = ''">Effacer</button>
   </div>
   <h5 class="sous_titre_3" v-show="vol || sol"><span v-if="vol">Le véhicule volant</span><span v-if="sol">Le véhicule au sol</span> subit, ce dommage critique :</h5>
   <p>

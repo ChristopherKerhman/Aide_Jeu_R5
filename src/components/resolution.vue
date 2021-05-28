@@ -5,11 +5,11 @@
     <li v-show="modifiable[4].valide">Munition explosive : cible passe en baissé la tête en cas de blessure.</li>
     <li v-show="DBRSpecial[0].valide">L'arme a la règle spéciale "surprise", l'unité prise pour cible passe automatiquement en "tête baissée".</li>
     <li v-show="DBRSpecial[6].valide">Tir en rafale, vous pouvez répartir chaque blessures sur 1 ou plusieurs unités</li>
-    <li v-show="DBRSpecial[10].valide || DBRSpecial[11].valide">Arme divine ou sainte.<button v-if="bonusMagique === 0" v-on:click="magique">Préparation armes magique</button></li>
+    <li v-show="DBRSpecial[10].valide || DBRSpecial[11].valide">Arme divine ou sainte.<button class="classique" v-if="bonusMagique === 0" v-on:click="magique">Préparation armes magique</button></li>
   </ul>
   <h4 v-if="sauvegarde > 0" class="sous_titre_3">sauvegarde : {{sauvegarde}} +</h4>
   <h4 v-else class="sous_titre_3">Pas de sauvegarde active</h4>
-  <button v-on:click="action">Action !</button>
+  <button class="classique" v-on:click="action">Action !</button>
   <div class="box_col">
       <p v-for="collector in piste" v-bind:key="collector">{{collector}}</p>
   </div>

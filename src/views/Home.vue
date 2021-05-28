@@ -43,7 +43,7 @@
       <figcaption>Support tactique</figcaption>
     </figure>
   </div>
-  <button v-on:click="Reset">Remise à 0</button>
+  <button class="button-two" v-on:click="Reset">Remise à 0</button>
   </div>
 </template>
 <script>
