@@ -6,9 +6,9 @@
         Vous connaissez la difficulté ? La puissance de l'arme, le nombre de blessure qu'elle fait en cas de touche ? La sauvegarde de la cible ? Passez directement à la résolution.
       </p>
     <div class="conteneur_row">
-      <button v-if="!revelatio" v-on:click="presentation">Ouvrir le menu</button>
-      <button v-else v-on:click="presentation">Fermer le menu</button>
-      <button v-on:click="retour">Remise à 0</button>
+      <button class="button-two" v-if="!revelatio" v-on:click="presentation">Ouvrir le menu</button>
+      <button class="button-two" v-else v-on:click="presentation">Fermer le menu</button>
+      <button class="button-two" v-on:click="retour">Remise à 0</button>
     </div>
   </header>
   <div v-if="revelatio">
