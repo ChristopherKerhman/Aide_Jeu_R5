@@ -19,7 +19,8 @@
 #nav {
   padding: 30px;
   font-family: 'Russo One', sans-serif;
-  font-size: 2em;
+  font-size: 1em;
+  font-weight: 100;
 }
 #nav a {
   font-weight: bold;
@@ -333,6 +334,8 @@ button:hover {
 /* @import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap'); == Ancienne police */
 .titre {
     font-size: 2em;
+    color: #2e3134;
+    font-weight: 100;
     font-family: 'Russo One', sans-serif;
     text-transform: uppercase;
     padding: 0.05em;
@@ -341,6 +344,8 @@ button:hover {
 }
 .sous_titre {
     font-size: large;
+    color: #2e3134;
+    font-weight: 100;
     text-transform: uppercase;
     font-family: 'Russo One', sans-serif;
     padding: 0.05em;
@@ -349,8 +354,10 @@ button:hover {
 }
 .sous_titre_3 {
     padding-left: 0.4em;
+    color: #2e3134;
     text-transform: uppercase;
     font-size: medium;
+    font-weight: 100;
     font-family: 'Russo One', sans-serif;
     /*text-shadow: 1px 1px 2px rgb(21, 167, 142), 0 0 1em rgb(121, 121, 129), 0 0 0.2em rgb(5, 5, 5);
 */

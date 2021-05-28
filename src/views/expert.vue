@@ -59,8 +59,8 @@
 </div>
   <article>
     <div id="conteneur_row_resolution">
-      <button v-on:click="action">Action !</button>
-      <button v-on:click="piste = []">Vider la piste</button>
+      <button class="classique" v-on:click="action">Action !</button>
+      <button class="classique" v-on:click="piste = []">Vider la piste</button>
     </div>
     <h4 class="sous_titre_3">Difficulté : {{touche}} +</h4>
       <h4 class="sous_titre_3">Caractéristique de l'Arme: {{dePuissance}} <span v-if="dc === 8">D8</span><span v-if="dc === 10">D10</span><span v-if="dc === 12">D12</span><span v-if="dc === 6">D6</span><span v-if="plus"> ++</span></h4>
