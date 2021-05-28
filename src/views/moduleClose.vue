@@ -7,19 +7,19 @@
   </header>
 <div class="box_col">
   <section v-if="amt1">
-      <button v-if="amt1 && puissance != 0 && dc != 0" v-on:click="nav1">Vers étape 2/4</button>
+      <button class="button-two" v-if="amt1 && puissance != 0 && dc != 0" v-on:click="nav1">Suite</button>
     <ordreClose/>
   </section>
   <section v-if="amt2">
-    <button v-if="amt2" v-on:click="nav2">Vers étape 3/4</button>
+    <button class="button-two" v-if="amt2" v-on:click="nav2">Suite</button>
     <regleSpecial/>
   </section>
   <section v-if="amt3">
-    <button v-if="amt3 && sauvegarde != 10" v-on:click="nav3">Vers étape 4/4</button>
+    <button class="button-two" v-if="amt3 && sauvegarde != 10" v-on:click="nav3">Suite</button>
     <situationClose/>
   </section>
   <section v-if="amt4">
-    <button v-on:click="retour">Retour</button>
+    <button class="button-two" v-on:click="retour">Retour</button>
     <resolution/>
   </section>
   </div>
